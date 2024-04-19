@@ -1,0 +1,20 @@
+<label>nombre</label>
+<input type="text" [(ngModel)]="nombre" placeholder="nombre"/>
+
+
+<label>{{etiquetaPeso}}</label>
+<input type="text" [(ngModel)]="peso"  id="peso"  placeholder="peso"/>
+
+<label>{{etiquetaAltura}}</label>
+<input type="text"  [(ngModel)]="altura"  id="altura" placeholder=" altura"/>
+
+<input type="button" (click)="muestra()" id="boton" value="calcula"/>
+
+<label>metrico</label>
+<input type="radio"  (click)="etiquetaPeso='Kg';etiquetaAltura='Metros'"[(ngModel)]="validacion" name="sistema" value="metrico"/>
+
+<label>ingles</label>
+<input type="radio"  (click)="etiquetaPeso='lb';etiquetaAltura='Inches'"[(ngModel)]="validacion" name="sistema" value="ingles"/>
+
+<p>{{mensaje}}</p>
+
